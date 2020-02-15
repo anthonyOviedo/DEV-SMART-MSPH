@@ -1,25 +1,27 @@
-<div class="body" style="margin-top: -3%; color: #b8b6b4;">
-    <h1 style="color: #b8b6b4;">Inicio de sesión </h1>
-    <div class="clear-loading spinner" style="margin-top: -1%; ">
-        <span></span>
-    </div>
-    <div class=" letras w3ls-login box box--big" style="margin-top: -2%;">
-        <!-- form starts here -->
+<section class="section-login">
+
+    <div class="col-md-3 offset-md-9 banner-login">
+
         <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar(f)" class="form-login">
-            <div class="agile-field-txt">
-                <label class="letras"><i class="fa fa-user" aria-hidden="true"></i> Nombre de usuario / Número de cédula </label>
+
+            <div class="form-group text-center">
+                <!-- <img src="../../assets/images/claro-logo.png" class="img-fluid" width="90%" alt="Inicio de sesión"> -->
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label class="letras"><i class="fa fa-user" aria-hidden="true"></i> Nombre de usuario / Número de cédula
+                </label>
                 <input type="text" ngModel name="username" class="form-control"
                     placeholder="Digite nombre de usuario o número de cédula " required />
             </div>
-            <div class="agile-field-txt">
+
+            <div class="form-group">
                 <label class="letras"><i class="fa fa-unlock-alt" aria-hidden="true"></i> contraseña </label>
                 <input id="pass" type="password" ngModel name="password" class="form-control"
-                    placeholder="Digite la contraseña" required="" id="myInput" />
+                placeholder="Digite la contraseña" required="" id="myInput" />
 
-
-                <div class="agile-right ">
-                    <a class="letras" href="#">Olvidó la contraseña?</a>
-                </div>
             </div>
 
             <div class="agile-field-txt ">
@@ -28,13 +30,19 @@
                 </div>
             </div>
 
+            <div class="form-group text-center">
+                <a class="letras" href="#">Olvidó la contraseña?</a>
+            </div>
 
+            <div class="form-group">
+                <input style="background: #5c7e10; color:#b8b6b4 ;" type="submit" value="INICIAR SESIÓN" [disabled]="ingresando">
+            </div>
 
-            <input style="background: #5c7e10; color:#b8b6b4 ;" type="submit" value="INICIAR SESIÓN" [disabled]="ingresando">
         </form>
+
     </div>
-    <!-- //form ends here -->
-</div>
+</section>
+
 
 <!--REGISTER MODAL-->
 <div class="modal fade" id="Register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -150,3 +158,4 @@
         <!--/.Content-->
     </div>
 </div>
+
