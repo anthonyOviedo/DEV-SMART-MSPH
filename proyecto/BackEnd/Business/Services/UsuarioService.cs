@@ -71,10 +71,6 @@ namespace Business.Services
             }
         }
 
-
-   
-
-
         public List<Usuario> Lista(int pais_Id, int emp_Id, string criterio)
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -194,7 +190,10 @@ namespace Business.Services
                 connection.Close();
             }
         }
+        
         #endregion
+
+
         #region Implements Interface IDisposable
         public void Dispose()
         {

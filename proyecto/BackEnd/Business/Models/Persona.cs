@@ -16,9 +16,8 @@ namespace Business.Models
         public string correo { get; set; }
         public string telefono { get; set; }
 
-
-
         #endregion
+
         #region Definition of Constructors
         public Persona()
         {
