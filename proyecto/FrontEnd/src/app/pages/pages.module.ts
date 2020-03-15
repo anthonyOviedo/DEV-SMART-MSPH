@@ -15,6 +15,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // datepicker
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
+// carrusel
+
+
 
 // Components
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -40,7 +43,7 @@ import { MapsComponent } from './maps/maps.component';
     MisQuejasComponent,
     CrearDenunciaComponent,
     MisDenunciasComponent,
-    MapsComponent,
+    MapsComponent    
     
 
   
@@ -55,7 +58,8 @@ import { MapsComponent } from './maps/maps.component';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    
     
     
   ]

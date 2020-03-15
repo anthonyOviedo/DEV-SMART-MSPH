@@ -9,12 +9,13 @@ namespace Business.Models
    public class Persona
     {
         #region Definition of Properties
-        public int persona_Id { get; set; }
+        public long persona_Id { get; set; }
         public string nombre { get; set; }
         public string apellido1 { get; set; }
         public string apellido2 { get; set; }
         public string correo { get; set; }
         public string telefono { get; set; }
+        public string strId { get; set; }
 
 
 
@@ -28,7 +29,7 @@ namespace Business.Models
             this.apellido1 = string.Empty;
             this.correo = string.Empty;
             this.telefono = string.Empty;
-
+            this.strId = string.Empty;
         }
         #endregion
     }

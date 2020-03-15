@@ -582,4 +582,64 @@ button, input[button] {
     height: 500px;
     width: 100%;
   }
+
+
+/* carrusel  */
+ngb-carousel {
+    width: 30%;
+    height :30%;
+    margin: 40px auto;
+}
+ngb-carousel img 
+{
+    width: 100%;
+    outline: none;
+    backface-visibility: visible;
+     border: silver 10px solid;
+}
+
+ngb-carousel {
+    width: inherit;
+    height: inherit;
+}
+
+.carousel-inner {
+    overflow: visible;
+}
+
+.carousel-item {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+}
+
+.carousel-item.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+     z-index: 20;
+}
+
+
+.carousel-control-next {
+     z-index: 20;
+}
+
+.carousel-indicators{
+    z-index: 20;
+}
+
+
+.modal-login{
+    /* background: linear-gradient(#171a21,#4a475e,#1b2838); */
+    width: 100;
+    height: 100;
+  
+}
+
   

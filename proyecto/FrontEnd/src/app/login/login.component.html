@@ -1,47 +1,167 @@
-<section class="section-login">
-
-    <div class="col-md-3 offset-md-9 banner-login">
-
-        <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar(f)" class="form-login">
-
-            <div class="form-group text-center">
-                <!-- <img src="../../assets/images/claro-logo.png" class="img-fluid" width="90%" alt="Inicio de sesión"> -->
-            </div>
-
-            <br>
-
-            <div class="form-group">
-                <label class="letras"><i class="fa fa-user" aria-hidden="true"></i> Nombre de usuario / Número de cédula
-                </label>
-                <input type="text" ngModel name="username" class="form-control"
-                    placeholder="Digite nombre de usuario o número de cédula " required />
-            </div>
-
-            <div class="form-group">
-                <label class="letras"><i class="fa fa-unlock-alt" aria-hidden="true"></i> contraseña </label>
-                <input id="pass" type="password" ngModel name="password" class="form-control"
-                placeholder="Digite la contraseña" required="" id="myInput" />
-
-            </div>
-
-            <div class="agile-field-txt ">
-                <div class="agile-right" style="margin-top: -2%;">
-                    <a class="letras" href="" data-toggle="modal" data-target="#Register">Registrarse</a>
-                </div>
-            </div>
-
-            <div class="form-group text-center">
-                <a class="letras" href="#">Olvidó la contraseña?</a>
-            </div>
-
-            <div class="form-group">
-                <input style="background: #5c7e10; color:#b8b6b4 ;" type="submit" value="INICIAR SESIÓN" [disabled]="ingresando">
-            </div>
-
-        </form>
-
+<!-- <div class="wrapper">
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-6 col-md-4 borde login1">1</div>
+        <div class="col-sm-6 col-md-8 borde carrucel">2</div>
     </div>
-</section>
+
+</div>
+
+</div>
+
+<style>
+.wrapper
+{
+    background: linear-gradient(#171a21,#1b2838,#2a475e );
+   
+}
+.borde{
+border: 3px yellow solid ;
+}
+
+.login1{
+
+}
+.carrucel{
+  
+
+}
+
+</style> -->
+
+
+
+
+
+<div style="background: linear-gradient(#171a21,#1b2838,#2a475e );">
+    <div class="row animated fadeIn">
+        <div class="col-5">
+            <!-- <div class="card"> -->
+                <!-- <div class="card-body"> -->
+                    <section >
+                        <div >
+
+                            <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar(f)" class="form-group">
+
+                                <div class="form-group text-center">
+                                    <!-- <img src="../../assets/images/claro-logo.png" class="img-fluid" width="90%" alt="Inicio de sesión"> -->
+                                </div>
+
+                                <br>
+
+
+                                <div class="form-group col-md-8 " >
+                                    <label class="letras"><i class="fa fa-user" aria-hidden="true"></i> Nombre de
+                                        usuario / Número de cédula
+                                    </label>
+                                    <input type="text" ngModel name="username" class="form-control"
+                                        placeholder="Inserte nombre de usuario o número de cédula " required />
+                                </div>
+
+                                <div class="form-group col-md-8">
+                                    <label class="letras"><i class="fa fa-unlock-alt" aria-hidden="true"></i> contraseña
+                                    </label>
+                                    <input id="pass" type="password" ngModel name="password" class="form-control"
+                                        placeholder="Inserte la contraseña" required="" id="myInput" />
+
+                                </div>
+
+                                <div class="agile-field-txt col-md-8">
+                                    <div class="agile-right" style="margin-top: -2%;">
+                                        <a class="letras" href="" data-toggle="modal"
+                                            data-target="#Register">Registrarse</a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center col-md-10">
+                                    <a class="letras" href="#">Olvidó la contraseña?</a>
+                                </div>
+
+                                <div class="form-group col-md-8">
+                                    <input class="btn btn-primary" type="submit" value="INICIAR SESIÓN"
+                                        [disabled]="ingresando">
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </section>
+
+
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+
+        <div class="col-7 ">
+            <!-- <div class="card"> -->
+                <!-- <div class="card-body"> -->
+                           <ngb-carousel [showNavigationArrows]="true">
+                            <ng-template ngbSlide id="firstSlide">
+                                <div class="picsum-img-wrapper">
+                                    <img src="assets/images/70508038_1453615581455840_8718812614794149888_o.jpg"
+                                        alt="Angular Carousel 1">
+                                </div>
+                                <div class="carousel-caption">
+                                    <h3>Bienvenidos a SMARTMSPH</h3>
+                                    <p>Una forma de encontrarnos mas cerca de usted.</p>
+                                </div>
+                            </ng-template>
+                            <ng-template ngbSlide id="secondSlide">
+                                <div class="picsum-img-wrapper">
+                                    <img src="assets/images/86806623_1608662692617794_128420548647583744_o.jpg"
+                                        alt="Angular Carousel 2">
+                                </div>
+                                <div class="carousel-caption">
+                                    <h3>Vida en San Pablo</h3>
+                                    <p>Los estudiantes del colegio Tecnico tomaron los pienceles y le dieron vida a las
+                                        paredes del parque.
+                                    </p>
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="section-carrucel" >
+    <div class=" .col-xs-6 .col-md-4 banner-carrucel ">
+        <div class="form-group">
+            <label class="letras"><i class="fa fa-user" aria-hidden="true"></i> Nombre de usuario / Número de cédula
+            </label>
+            <input type="text" ngModel name="username" class="form-control"
+                placeholder="Digite nombre de usuario o número de cédula " required />
+        </div>
+    </div>
+</section> -->
 
 
 <!--REGISTER MODAL-->
@@ -73,8 +193,8 @@
                         <div class="col-lg-9">
                             <div class="form-group">
                                 <label>Apellido 1 </label>
-                                <input [(ngModel)]="Persona.apellido1" type="text" id="form3" class="form-control validate"
-                                    placeholder="Inserte su primer apellido">
+                                <input [(ngModel)]="Persona.apellido1" type="text" id="form3"
+                                    class="form-control validate" placeholder="Inserte su primer apellido">
                             </div>
                         </div>
                     </div>
@@ -85,8 +205,8 @@
                         <div class="col-lg-9">
                             <div class="form-group">
                                 <label>Apellido 2</label>
-                                <input [(ngModel)]="Persona.apellido2" type="text" id="form3" class="form-control validate"
-                                    placeholder="Inserte su segundo apellido">
+                                <input [(ngModel)]="Persona.apellido2" type="text" id="form3"
+                                    class="form-control validate" placeholder="Inserte su segundo apellido">
                             </div>
                         </div>
                     </div>
@@ -106,8 +226,8 @@
                         <div class="col-lg-9">
                             <div class="form-group">
                                 <label>Correo</label>
-                                <input [(ngModel)]="Persona.correo" type="email" id="form3" class="form-control validate"
-                                    placeholder="Inserte un correo electrónico">
+                                <input [(ngModel)]="Persona.correo" type="email" id="form3"
+                                    class="form-control validate" placeholder="Inserte un correo electrónico">
                             </div>
                         </div>
                     </div>
@@ -115,8 +235,8 @@
                         <div class="col-lg-9">
                             <div class="form-group">
                                 <label>Télefono</label>
-                                <input [(ngModel)]="Persona.telefono" type="text" id="form3" class="form-control validate"
-                                    placeholder="Inserte un número de télefono">
+                                <input [(ngModel)]="Persona.telefono" type="text" id="form3"
+                                    class="form-control validate" placeholder="Inserte un número de télefono">
                             </div>
                         </div>
                     </div>
@@ -135,8 +255,8 @@
                         <div class="col-lg-9">
                             <div class="form-group">
                                 <label>contraseña</label>
-                                <input [(ngModel)]="Usuario.password" type="password" id="form3" class="form-control validate"
-                                    placeholder="Inserte una contraseña">
+                                <input [(ngModel)]="Usuario.password" type="password" id="form3"
+                                    class="form-control validate" placeholder="Inserte una contraseña">
                             </div>
                         </div>
                     </div>
@@ -151,11 +271,10 @@
 
             <!--Footer-->
             <div class="modal-footer justify-content-center modal-footer">
-                <a type="button" (click)="registrarse()" class="btn  waves-effect" style="background: #5c7e10; color:#b8b6b4 ;">Enviar<i
-                        class="fas fa-paper-plane-o ml-1"></i></a>
+                <a type="button" (click)="registrarse()" class="btn  waves-effect"
+                    style="background: #5c7e10; color:#b8b6b4 ;">Enviar<i class="fas fa-paper-plane-o ml-1"></i></a>
             </div>
         </div>
         <!--/.Content-->
     </div>
 </div>
-
