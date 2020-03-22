@@ -38,7 +38,7 @@ namespace Business.Services
 
                 usuario.usuario_Id = table.Rows[0]["User_Id"].ToString();
                 usuario.nombre = table.Rows[0]["UserName"].ToString();
-                usuario.persona.persona_Id = int.Parse(table.Rows[0]["Person_id"].ToString());
+                usuario.persona.persona_Id = long.Parse(table.Rows[0]["Person_id"].ToString());
                 usuario.persona.nombre= table.Rows[0]["Name"].ToString();
                 usuario.persona.apellido1 = table.Rows[0]["LastName1"].ToString();
                 usuario.persona.apellido1 = table.Rows[0]["LastName2"].ToString();
@@ -124,8 +124,9 @@ namespace Business.Services
             {
                 connection.Open();
                 connection.BeginTransaction();
+               // user.persona.persona_Id = long.Parse(user.persona.strId.Trim());
 
-                query = "CALL UsuarioRegistro (" + ""+ user.persona.persona_Id.ToString() +",'" + user.persona.nombre.Trim() + "','" +  
+                query = "CALL UsuarioRegistro (" + ""+ user.persona.strId.ToString() + ",'" + user.persona.nombre.Trim() + "','" +  
                             user.persona.apellido1.Trim() + "','" + user.persona.apellido2.Trim() + "','"  + user.persona.correo.Trim() +
                             "','" + user.persona.telefono.Trim() + "'," + user.usuario_Id.ToString() + ",'" + user.nombre.Trim() + "','" + 
                              user.password.Trim() + "'," + user.rol.ToString() + ")";

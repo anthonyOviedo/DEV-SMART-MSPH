@@ -1,16 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CryptoService, UsuarioService } from '../services/service.index';
 import { Usuario, Persona, Departamento } from 'src/app/models/model.index';
+import { NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 declare var $: any;
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styles: []
+  styles: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  slideActivate(ngbSlideEvent: NgbSlideEvent) {
+    console.log(ngbSlideEvent.source);
+    console.log(ngbSlideEvent.paused);
+    console.log(NgbSlideEventSource.INDICATOR);
+    console.log(NgbSlideEventSource.ARROW_LEFT);
+    console.log(NgbSlideEventSource.ARROW_RIGHT);
+  }
 
   ingresando: boolean = false;
   Usuario: Usuario;
@@ -81,7 +92,7 @@ export class LoginComponent implements OnInit {
         $("#Registrarse").modal('hide');
        
         this.Persona.persona_Id = parseInt(this.Persona.strId);
-        console.log(this.Persona.persona_Id);
+        // console.log(this.Persona.persona_Id);
         this.Usuario.password = this._cryptoService.encryptPassword(this.Usuario.password);
         this.Usuario.rol = 3; 
         this.Usuario.persona=this.Persona;
@@ -98,3 +109,5 @@ export class LoginComponent implements OnInit {
 
 
 }
+
+

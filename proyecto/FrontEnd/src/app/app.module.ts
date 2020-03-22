@@ -7,6 +7,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { AgmCoreModule } from '@agm/core';
 
+
+
 // Routes
 import { APP_ROUTES } from './app.routes';
 
@@ -21,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PagesComponent } from './pages/pages.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Services
 import { UsuarioService, HttphInterceptorService } from './services/service.index';
@@ -42,6 +45,7 @@ import { UsuarioService, HttphInterceptorService } from './services/service.inde
     FormsModule,
     ReactiveFormsModule,
     ServiceModule,
+    NgbModule,
     SharedModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDCLVmvVTac-g7KgAUv0pDpmGxoUS-aVsI'
